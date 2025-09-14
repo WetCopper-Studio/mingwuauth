@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #213547;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* 通用样式 */
+.el-button {
+  font-family: inherit;
+}
+
+/* 响应式表格样式 */
+@media (max-width: 768px) {
+  .el-table {
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  .el-table__header th,
+  .el-table__body td {
+    padding: 8px 4px;
+  }
+  
+  /* 隐藏某些不重要的列 */
+  .el-table .hide-on-mobile {
+    display: none;
+  }
+  
+  /* 表格水平滚动容器 */
+  .table-scroll-container {
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+
+/* 响应式按钮组 */
+@media (max-width: 768px) {
+  .action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .action-buttons .el-button {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+/* 响应式搜索和筛选区 */
+@media (max-width: 768px) {
+  .search-filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .filter-select {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+/* 小屏幕设备适配 (480px以下) */
+@media (max-width: 480px) {
+  /* 全局字体调整 */
+  :root {
+    font-size: 14px;
+  }
+  
+  /* 更紧凑的表格样式 */
+  .el-table {
+    font-size: 11px;
+  }
+  
+  .el-table__header th,
+  .el-table__body td {
+    padding: 6px 2px;
+  }
+  
+  /* 隐藏更多列 */
+  .el-table .hide-on-smaller-mobile {
+    display: none;
+  }
+  
+  /* 按钮组完全垂直排列 */
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .action-buttons .el-button {
+    width: 100%;
+    min-width: auto;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  
+  /* 搜索筛选区调整 */
+  .search-filter-section {
+    gap: 8px;
+  }
+  
+  .filter-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .filter-select {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  /* 对话框适配 */
+  .el-dialog {
+    width: 90% !important;
+    margin: 10% auto !important;
+  }
+  
+  .el-dialog__header {
+    padding: 12px 15px;
+  }
+  
+  .el-dialog__body {
+    padding: 15px;
+    font-size: 13px;
+  }
+  
+  /* 表单适配 */
+  .el-form-item {
+    margin-bottom: 12px;
+  }
+  
+  .el-form--label-top .el-form-item__label {
+    padding-bottom: 6px;
+  }
+  
+  .el-input {
+    font-size: 13px;
+  }
+  
+  /* 分页控件适配 */
+  .el-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px;
+  }
+  
+  .el-pagination__sizes {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  
+  /* 卡片适配 */
+  .el-card {
+    margin-bottom: 15px;
+  }
+  
+  .el-card__body {
+    padding: 12px;
+  }
+}
